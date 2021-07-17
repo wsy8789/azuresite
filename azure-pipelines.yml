@@ -1,0 +1,11 @@
+# Starter pipeline
+- task: AzureWebApp@1
+  inputs:
+    azureSubscription: 'azure devlops test'
+    appType: 'webApp'
+    appName: 'WebAppWindows2021'
+    deployToSlotOrASE: true
+    resourceGroupName: 'test'
+    slotName: 'production'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    deploymentMethod: 'auto'
